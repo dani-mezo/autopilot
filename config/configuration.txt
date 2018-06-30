@@ -1,0 +1,4 @@
+[Files]
+action_file_location = ./config/actions2.txt
+data_file_location = ./config/data.xlsx
+data_file_sheet = Munka1

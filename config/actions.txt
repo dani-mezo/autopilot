@@ -1,0 +1,19 @@
+repeat from row 1
+click 50 12
+wait 2
+click 10 10
+wait 2
+click 60 212
+wait 5
+click 919 211
+wait 1
+copy name
+click 123 233
+wait 3
+click 1230 222
+wait 2
+click 451 11
+paste
+copy pet
+click 222 12
+paste
