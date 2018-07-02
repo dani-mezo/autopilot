@@ -1,10 +1,11 @@
+import argparse
 from configparser import ConfigParser
 from actions.click import Click
 from actions.copy import Copy
 from actions.paste import Paste
 from actions.wait import Wait
 from data.data_reader import DataReader
-
+from recorder.recorder import Recorder
 
 actions = []
 action_delimiter = ' '
@@ -52,17 +53,36 @@ def execute_actions(row):
         action.execute(row)
 
 
-def run():
+def record_mode(file_name):
+    print("Recording mode has been activated.")
+    recorder = Recorder(file_name)
+    recorder.record()
+
+
+def autopilot_mode():
+    print("Autopilot mode has been activated.")
     configuration_parser.read('./config/configuration.txt')
     configuration = configuration_parser['Files']
     counter = read_actions(configuration)
     data = read_data(configuration)
-
     for index, row in data.iterrows():
         if index < counter - 1:
             pass
         else:
             execute_actions(row)
+
+
+def run():
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('-r', type=bool, help='A flag to enable recordings of click points', default=False)
+    parser.add_argument('--name', help='The name of the file that should be created with the recordings. When not provided,'
+                                       'a random name will be generated for it.')
+    args = parser.parse_args()
+
+    if args.r:
+        record_mode(args.name)
+    else:
+        autopilot_mode()
 
 
 run()

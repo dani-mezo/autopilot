@@ -1,5 +1,5 @@
 repeat from row 1
 wait 5
 click 500 500
-copy pet
+copy name
 paste
