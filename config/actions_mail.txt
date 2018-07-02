@@ -1,0 +1,16 @@
+repeat from row 1
+click 103 234
+wait 1
+click 2125 496
+copy mail
+paste
+wait 1
+click 2102 538
+copy subject
+paste
+wait 1
+click 2086 611
+copy text
+paste
+wait 1
+click 1982 1016

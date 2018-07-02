@@ -4,7 +4,7 @@ from actions.click import Click
 from actions.copy import Copy
 from actions.paste import Paste
 from actions.wait import Wait
-from data.data_reader import DataReader
+from engine.engine import Engine
 from recorder.recorder import Recorder
 
 actions = []
@@ -40,19 +40,6 @@ def create_action(action):
     return action
 
 
-def read_data(configuration):
-    print('Reading up the data file.')
-    data_reader = DataReader(configuration)
-    return data_reader.read_structure()
-
-
-def execute_actions(row):
-    print("------------------------- Processing row")
-    print(row)
-    for action in actions:
-        action.execute(row)
-
-
 def record_mode(file_name):
     print("Recording mode has been activated.")
     recorder = Recorder(file_name)
@@ -64,12 +51,8 @@ def autopilot_mode():
     configuration_parser.read('./config/configuration.txt')
     configuration = configuration_parser['Files']
     counter = read_actions(configuration)
-    data = read_data(configuration)
-    for index, row in data.iterrows():
-        if index < counter - 1:
-            pass
-        else:
-            execute_actions(row)
+    engine = Engine(configuration, counter, actions)
+    engine.execute()
 
 
 def run():
