@@ -12,13 +12,14 @@ executing the actions.
 To run the application in _Autopilot mode_:
 > python autopilot.py
 
-*Note:* the execution can be paused and resumed by pressing 'F2'.
+*Note:* the execution can be paused and resumed by pressing 'F2'. Right after the application is started the execution
+will be paused, in order to provide the possibility to get the GUI in position.
 
 ### Recording mode
 Actions can be recorded using the _Recording mode_. When enabled, the application starts to listen.
 Clicks - except for the very first one - and delays between them will be recorded into a generated action file, 
 so later can be used for execution. Additionally, a step can be _marked for edition_ in the generated action file 
-by pressing 'F2'.
+by pressing 'F2' the moment when the mark is wished to be present.
 
 To run the application in _Recording mode_:
 > python autopilot.py -r true
@@ -29,7 +30,7 @@ Check the example _configuration.txt_ for details. An _xlsx_ data file and an _a
 must be provided for the _Autopilot mode_. For running the _Recording mode_ no configuration is required.
 
 ### Data source
-Data can be provided so that it can be copy-pasted during the action execution phase. The only supported 
+Data can be provided so that it can be copy-pasted during the execution of _Autopilot mode_. The only supported 
 format is _xlsx_. The file is expected to contain a _list_ of data, where every row represents *one* iteration of the 
 actions - except the very first, which conventionally must constitute a header row, where every cell can be 
 used to reference the column below.
@@ -42,10 +43,10 @@ Mundo | Dr. | doctor@mundo.com
 Baley | Detective | baley@earth.com
 Solo Han | merch | chubakka@deathstar.com
 
-_In this example, in the first iteration will process the row (Mundo, Dr., doctor@mundo.com)._
+_In this example, in the first iteration of Autopilot mode will process the row (Mundo, Dr., doctor@mundo.com)._
 
 ### Actions
-Autopilot executes the actions for each row in the configured _xslx_ file. Configuring different actions is possible 
+The _Autopilot mode_ executes the actions for each row in the configured _xslx_ file. Configuring different actions is possible 
 via an action configuration file, provided in _configuration.txt_. Additionally to actions, the starting row of the 
 _xlsx_ file also can be configured in the very first line of the action file.
 Example first line:
@@ -55,15 +56,20 @@ _Will iterate from the first data row (excluding headers)_.
 
 Example action file:
 > repeat from row 3
+
 > click 100 300
+
 > copy name
+
 > paste
+
 > click 500 700
 
 Different actions are listed below.
 
-#### Click
+### Click
 Clicks to a certain coordinate.
+
 property|value
 --- | --- 
 reference in action file|"click"
