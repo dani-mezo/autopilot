@@ -10,10 +10,10 @@ _Autopilot mode_ is the default execution mode. It is used for iterating on the 
 executing the actions.
 
 To run the application in _Autopilot mode_:
-> python autopilot.py
+> python autopilot.py --target wazsi
+This will execute the actions stored in _./config/actions_wazsi.txt_
 
-*Note:* the execution can be paused and resumed by pressing 'Pause'. Right after the application is started the execution
-will be paused, in order to provide the possibility to get the GUI in position.
+*Note:* the execution can be paused and resumed by pressing 'Pause' and ended by pressing 'Esc'.
 
 ### Recording mode
 Actions can be recorded using the _Recording mode_. When enabled, the application starts to listen.
@@ -22,12 +22,13 @@ so later can be used for execution. Additionally, a step can be _marked for edit
 by pressing 'Pause' the moment when the mark is wished to be present.
 
 To run the application in _Recording mode_:
-> python autopilot.py --record
+> python autopilot.py --record wazsi
+This will record issued clicks, key presses, scrolls, etc, into _./config/actions_wazsi.txt_.
 
 # Configuration
 ### Basic configuration
 Check the example _configuration.txt_ for details. An _xlsx_ data file and an _action_ configuration
-must be provided for the _Autopilot mode_. For running the _Recording mode_ no configuration is required.
+to be provided for the _Autopilot mode_. For running the _Recording mode_ no configuration is required.
 
 ### Data source
 Data can be provided so that it can be copy-pasted during the execution of _Autopilot mode_. The only supported 
@@ -57,13 +58,13 @@ _Will iterate from the first data row (excluding headers)_.
 Example action file:
 > repeat from row 3
 
-> click 100 300
+> click 100 300 left
 
 > copy name
 
 > paste
 
-> click 500 700
+> click 500 700 left
 
 Different actions are listed below.
 
@@ -118,3 +119,39 @@ Example:
 > paste
 
 _Pastes the copied data._
+
+### Scroll
+Scrolls.
+
+property|value
+| --- | --- |
+reference in action file| "scroll"
+
+Example:
+> scroll 3231 263 0 -1
+
+_Puts the cursor at position (3231, 263) and scrolls vertically down._
+
+### Combo
+Issues a hotkey command.
+
+property|value
+| --- | --- |
+reference in action file| "combo"
+
+Example:
+> combo ctrl t
+
+_Issues Ctrl+w and opens up a tab if a chrome window is at focus._
+
+### Esc
+Issues a hotkey command.
+
+property|value
+| --- | --- |
+reference in action file| "esc"
+
+Example:
+> esc
+
+_Quits the action execution._
