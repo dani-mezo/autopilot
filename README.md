@@ -11,6 +11,7 @@ executing the actions.
 
 To run the application in _Autopilot mode_:
 > python autopilot.py --target wazsi
+
 This will execute the actions stored in _./config/actions_wazsi.txt_
 
 *Note:* the execution can be paused and resumed by pressing 'Pause' and ended by pressing 'Esc'.
@@ -23,6 +24,7 @@ by pressing 'Pause' the moment when the mark is wished to be present.
 
 To run the application in _Recording mode_:
 > python autopilot.py --record wazsi
+
 This will record issued clicks, key presses, scrolls, etc, into _./config/actions_wazsi.txt_.
 
 # Configuration
