@@ -26,11 +26,11 @@ To run the application in _Recording mode_:
 This will record issued clicks, key presses, scrolls, etc, into _./config/actions_wazsi.txt_.
 
 # Configuration
-### Basic configuration
+## Basic configuration
 Check the example _configuration.txt_ for details. An _xlsx_ data file and an _action_ configuration
 to be provided for the _Autopilot mode_. For running the _Recording mode_ no configuration is required.
 
-### Data source
+## Data source
 Data can be provided so that it can be copy-pasted during the execution of _Autopilot mode_. The only supported 
 format is _xlsx_. The file is expected to contain a _list_ of data, where every row represents *one* iteration of the 
 actions - except the very first, which conventionally must constitute a header row, where every cell can be 
@@ -46,7 +46,7 @@ Solo Han | merch | chubakka@deathstar.com
 
 _In this example, in the first iteration of Autopilot mode will process the row (Mundo, Dr., doctor@mundo.com)._
 
-### Actions
+# Actions
 The _Autopilot mode_ executes the actions for each row in the configured _xslx_ file. Configuring different actions is possible 
 via an action configuration file, provided in _configuration.txt_. Additionally to actions, the starting row of the 
 _xlsx_ file also can be configured in the very first line of the action file.
@@ -68,7 +68,7 @@ Example action file:
 
 Different actions are listed below.
 
-### Click
+## Click
 Clicks to a certain coordinate.
 
 property|value
@@ -82,7 +82,7 @@ Example in action file:
 
 _Will click to x=100, y=300._
 
-### Wait
+## Wait
 Waits a given amound of seconds.
 
 property|value
@@ -95,7 +95,7 @@ Example in action file:
 
 _Will wait for 2 seconds._
 
-### Copy
+## Copy
 Copies to the clipboard a property of the row of the _xlsx_ data that is currently under iteration.
 
 property|value
@@ -108,7 +108,7 @@ Example:
 
 _Copies the title of the row that is currently being used for action execution._
 
-### Paste
+## Paste
 Pastes previously copied data.
 
 property|value
@@ -120,7 +120,7 @@ Example:
 
 _Pastes the copied data._
 
-### Scroll
+## Scroll
 Scrolls.
 
 property|value
@@ -132,7 +132,7 @@ Example:
 
 _Puts the cursor at position (3231, 263) and scrolls vertically down._
 
-### Combo
+## Combo
 Issues a hotkey command.
 
 property|value
@@ -144,7 +144,7 @@ Example:
 
 _Issues Ctrl+w and opens up a tab if a chrome window is at focus._
 
-### Esc
+## Esc
 Issues a hotkey command.
 
 property|value
