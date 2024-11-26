@@ -8,5 +8,5 @@ class DataReader:
         self.sheet = configuration['data_file_sheet']
 
     def read_structure(self):
-        data = pd.read_excel(self.file, sheet_name=self.sheet)
+        data = pd.read_excel(self.file, sheet_name=self.sheet, engine='openpyxl')
         return data

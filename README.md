@@ -12,17 +12,17 @@ executing the actions.
 To run the application in _Autopilot mode_:
 > python autopilot.py
 
-*Note:* the execution can be paused and resumed by pressing 'F2'. Right after the application is started the execution
+*Note:* the execution can be paused and resumed by pressing 'Pause'. Right after the application is started the execution
 will be paused, in order to provide the possibility to get the GUI in position.
 
 ### Recording mode
 Actions can be recorded using the _Recording mode_. When enabled, the application starts to listen.
 Clicks - except for the very first one - and delays between them will be recorded into a generated action file, 
 so later can be used for execution. Additionally, a step can be _marked for edition_ in the generated action file 
-by pressing 'F2' the moment when the mark is wished to be present.
+by pressing 'Pause' the moment when the mark is wished to be present.
 
 To run the application in _Recording mode_:
-> python autopilot.py -r true
+> python autopilot.py --record
 
 # Configuration
 ### Basic configuration

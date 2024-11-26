@@ -1,21 +1,26 @@
 import argparse
 from configparser import ConfigParser
 from actions.click import Click
+from actions.combo import Combo
 from actions.copy import Copy
+from actions.esc import Escape
+from actions.key_up import KeyUp
 from actions.paste import Paste
+from actions.key_down import KeyDown
+from actions.scroll import Scroll
 from actions.wait import Wait
 from engine.engine import Engine
 from recorder.recorder import Recorder
 
 actions = []
 action_delimiter = ' '
-action_types = {'click': Click, 'wait': Wait, 'copy': Copy, 'paste': Paste}
+action_types = {action.trigger: action for action in [Click, Wait, Copy, Paste, KeyDown, KeyUp, Scroll, Escape, Combo]}
 configuration_parser = ConfigParser()
 initial_counter = 1
 
 
-def read_actions(configuration):
-    source = configuration['action_file_location']
+def read_actions(source):
+    source = f"./config/actions_{source}.txt" if not source.startswith("./config/actions_") else source
     print('Reading up action configuration from source: ' + source)
     actions_configuration = open(source, 'r')
     for action in actions_configuration:
@@ -46,26 +51,27 @@ def record_mode(file_name):
     recorder.record()
 
 
-def autopilot_mode():
+def autopilot_mode(file_name):
     print("Autopilot mode has been activated.")
     configuration_parser.read('./config/configuration.txt')
     configuration = configuration_parser['Files']
-    counter = read_actions(configuration)
+    counter = read_actions(file_name)
     engine = Engine(configuration, counter, actions)
     engine.execute()
 
 
 def run():
     parser = argparse.ArgumentParser(description='Process some integers.')
-    parser.add_argument('-r', type=bool, help='A flag to enable recordings of click points', default=False)
-    parser.add_argument('--name', help='The name of the file that should be created with the recordings. When not provided,'
-                                       'a random name will be generated for it.')
+    parser.add_argument('--record', action='store_true', help='Enable recording mode to record GUI actions')
+    parser.add_argument('--target', help='The name of the target file that should be created with the '
+                                         'recordings or executed by autopilot. When not provided '
+                                         'a random name will be generated for it in recording mode.')
     args = parser.parse_args()
 
-    if args.r:
-        record_mode(args.name)
+    if args.record:
+        record_mode(args.target)
     else:
-        autopilot_mode()
+        autopilot_mode(args.target)
 
 
 run()

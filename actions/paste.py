@@ -4,6 +4,8 @@ from pynput.keyboard import Key, Controller
 
 class Paste(action.Action):
 
+    trigger = "paste"
+
     def __init__(self, args):
         # print("paste")
         pass

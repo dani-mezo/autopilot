@@ -1,4 +1,4 @@
 [Files]
-action_file_location = ./config/actions_mail.txt
+action_file_location = ./config/actions_linkedin_scroll.txt
 data_file_location = ./config/data_2.xlsx
 data_file_sheet = Munka1

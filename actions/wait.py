@@ -3,6 +3,7 @@ from time import sleep
 
 
 class Wait(action.Action):
+    trigger = "wait"
 
     def __init__(self, duration_seconds):
         self.duration_seconds = int(duration_seconds[0])
@@ -12,5 +13,5 @@ class Wait(action.Action):
         self.wait()
 
     def wait(self):
-        print('Action: wait ' + str(self.duration_seconds) + " seconds")
+        print(f"Action: {Wait.trigger} {str(self.duration_seconds)} seconds")
         sleep(self.duration_seconds)

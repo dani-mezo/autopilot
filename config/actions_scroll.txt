@@ -1,0 +1,19 @@
+repeat from row 1
+scroll 3231 263 0 -1
+scroll 3231 263 0 -1
+scroll 3231 263 0 -1
+scroll 3231 263 0 -1
+scroll 3231 263 0 -1
+scroll 3231 263 0 -1
+scroll 3231 263 0 -1
+scroll 3231 263 0 1
+scroll 3231 263 0 1
+scroll 3231 263 0 1
+scroll 3231 263 0 1
+scroll 3231 263 0 1
+scroll 3231 263 0 1
+scroll 3231 263 0 1
+scroll 3231 263 0 1
+scroll 3231 263 0 1
+click 3231 263 left
+combo ctrl w

@@ -1,0 +1,124 @@
+repeat from row 1
+click 3427 469 middle
+click 3423 497 middle
+click 3423 530 middle
+click 3423 565 middle
+click 3423 603 middle
+click 3423 645 middle
+click 3423 673 middle
+click 3421 691 middle
+click 3420 712 middle
+click 3423 748 middle
+click 3427 779 middle
+click 3427 812 middle
+click 3428 841 middle
+click 3428 856 middle
+click 3428 875 middle
+click 3426 903 middle
+click 3426 917 middle
+click 3427 946 middle
+click 3427 964 middle
+click 3428 998 middle
+click 3426 1023 middle
+click 3426 1044 middle
+click 3427 1072 middle
+click 3427 1101 middle
+click 3430 1126 middle
+click 3432 1149 middle
+click 3431 1169 middle
+click 3430 1197 middle
+click 3433 1215 middle
+click 3432 1240 middle
+click 3430 1269 middle
+click 3430 1291 middle
+click 3430 1314 middle
+click 3432 1332 middle
+click 3431 1351 middle
+click 3432 1362 middle
+click 3433 1382 middle
+click 3432 1386 middle
+scroll 3434 1382 0 -1
+scroll 3434 1382 0 -1
+scroll 3436 1373 0 -1
+scroll 3436 1371 0 -1
+scroll 3439 1352 0 -1
+scroll 3439 1352 0 -1
+scroll 3439 1352 0 -1
+scroll 3439 1352 0 -1
+scroll 3439 1352 0 -1
+scroll 3439 1352 0 -1
+scroll 3438 1347 0 -1
+scroll 3428 406 0 1
+scroll 3428 406 0 1
+scroll 3425 412 0 -1
+wait 1
+click 3422 359 middle
+click 3424 391 middle
+click 3422 413 middle
+click 3422 452 middle
+click 3424 498 middle
+click 3424 552 middle
+click 3425 586 middle
+click 3425 616 middle
+click 3424 652 middle
+click 3424 674 middle
+click 3424 700 middle
+click 3425 735 middle
+click 3426 755 middle
+click 3425 783 middle
+click 3425 816 middle
+click 3424 839 middle
+click 3426 870 middle
+click 3425 903 middle
+click 3424 920 middle
+click 3424 951 middle
+click 3424 974 middle
+click 3424 989 middle
+click 3424 1008 middle
+click 3425 1032 middle
+click 3426 1056 middle
+click 3426 1086 middle
+click 3426 1100 middle
+click 3424 1134 middle
+click 3423 1157 middle
+click 3422 1182 middle
+click 3422 1214 middle
+click 3425 1246 middle
+click 3425 1275 middle
+click 3424 1317 middle
+click 3425 1336 middle
+click 3429 1376 middle
+click 3429 1396 middle
+click 3431 1409 middle
+scroll 3431 1408 0 -1
+scroll 3431 1408 0 -1
+scroll 3437 1392 0 -1
+scroll 3445 1368 0 -1
+scroll 3448 1354 0 -1
+scroll 3475 1268 0 -1
+scroll 3475 1269 0 -1
+scroll 3475 1269 0 -1
+wait 1
+click 3422 482 middle
+click 3422 515 middle
+click 3420 567 middle
+click 3421 603 middle
+click 3421 630 middle
+click 3421 676 middle
+click 3420 712 middle
+click 3422 748 middle
+click 3423 791 middle
+click 3425 839 middle
+click 3421 892 middle
+click 3422 913 middle
+click 3421 962 middle
+click 3422 985 middle
+click 3423 1005 middle
+click 3422 1042 middle
+click 3422 1067 middle
+click 3421 1094 middle
+click 3418 1125 middle
+click 3415 1151 middle
+click 3415 1183 middle
+click 3416 1218 middle
+esc

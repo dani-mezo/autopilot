@@ -5,3 +5,7 @@ class Action:
 
     def execute(self, row):
         pass
+
+    @staticmethod
+    def record(file, *data):
+        pass

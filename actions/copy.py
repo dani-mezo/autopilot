@@ -4,6 +4,8 @@ import pyperclip
 
 class Copy(action.Action):
 
+    trigger = "copy"
+
     def __init__(self, target):
         self.target = target[0]
         # print("copy " + self.target)
